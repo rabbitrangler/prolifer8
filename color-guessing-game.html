@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Color Guessing Game</title>
+    <style>
+    h1 {
+    text-align: center;
+    /*border-block: 3px;
+    border-block-color: black;*/
+    }
+    h2 {
+        text-align: center;
+        margin-top: 150px;
+    }
+    h3 {
+        text-align: center;
+    }
+    .button-container-div {
+        text-align: center;
+        border: 0px;
+    }
+    p {
+        text-align: center;
+    }
+    /* This section does nothing I'm having trouble doing anything CSS right now
+    .button-container-div:hover {text-decoration: palevioletred;}
+    .button-container-div:active {text-decoration: none;}
+    */
+    </style>
+</head>
+<body>
+    <h1>Color Guessing Game</h1>
+    <div class="button-container-div">
+        <button type="button" onclick="runGame()">Start Game</button>
+    </div>
+    <h2>Your Color Options</h2>
+    <h3>GREEN | PLUM | GOLD | PURPLE | MAROON | TEAL | PINK | IVORY | GRAY | SALMON</h3>
+    <p>
+    <img src="images/css-color-swatches/green.jpg"/>
+    <img src="images/css-color-swatches/plum.jpg"/>
+    <img src="images/css-color-swatches/gold.jpg"/>
+    <img src="images/css-color-swatches/purple.jpg"/>
+    <img src="images/css-color-swatches/maroon.jpg"/>
+    <img src="images/css-color-swatches/teal.jpg"/>
+    <img src="images/css-color-swatches/pink.jpg"/>
+    <img src="images/css-color-swatches/ivory.jpg"/>
+    <img src="images/css-color-swatches/gray.jpg"/>
+    <img src="images/css-color-swatches/salmon.jpg"/>
+    </p>
+    <script>
+        const COLORS_ARRAY = ['green', 'ivory', 'gold', 'purple', 'maroon', 'teal', 'pink', 'plum', 'salmon', 'gray'];
+
+        function runGame() {
+            let guess = '';
+            let correct = false;
+            let numTries = 0;
+            const targetIndex = Math.floor(Math.random() * COLORS_ARRAY.length);
+            const target = COLORS_ARRAY [targetIndex];
+            console.log (target);
+            do {
+                guess = prompt("I'm thinking of one of these colors: \n\n" + COLORS_ARRAY.join(', ') + '\n\nWhat color am I thinking of?\n')
+                if (guess === null) {
+                    alert('Game Over!');
+                    return;
+                }
+                numTries += 1;
+                correct = checkGuess(guess, target)
+            } while (!correct);
+            alert ("Congratulations!\n\n You got it in: " + numTries );
+            document.body.style.background = guess;
+        }
+
+        function checkGuess(guess, target) {
+            let correct = false;
+            if (!COLORS_ARRAY.includes(guess)) {
+                alert ("Sorry that color is not an option.");
+            } else if (guess < target) {
+                alert ("Your color is alphabetically lower. Please try again.");
+            } else if (guess > target) {
+                alert ("Your color is alphabetically higher. Please try again.");
+            } else {
+                correct = true;
+            }
+            return correct;
+        }
+    </script>
+</body>
+</html>

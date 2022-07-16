@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>CSS Practice: CSS Corner Cafe</title>
+    <link rel="stylesheet" href="css/practice-styles.css" />
+</head>
+<body>
+    <style>
+        .violet-text {
+            color: violet;
+        }
+        .indigo-text {
+            color:indigo;
+        }
+        .yellow-text {
+            color: yellow;
+        }
+        .orange-text {
+            color: orange;
+        }
+        .red-text {
+            color: red;
+        }
+    </style>
+    <h1>CSS Corner Cafe</h1>
+    <section>
+        <h2>Menu</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Coffee</td>
+                    <td>$2</td>
+                </tr>
+                <tr>
+                    <td>Tea</td>
+                    <td>$1.50</td>
+                </tr>
+                <tr>
+                    <td>Chicken & Waffles</td>
+                    <td>$12</td>
+                </tr>
+                <tr>
+                    <td>Blueberry Pancakes</td>
+                    <td>$6</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2><span class="yellow-text">Submit Your Review</span></h2>
+        <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+            <label for="name"><span class="orange-text">Name</span></label>
+            <input type="text" id="name" name="name" />
+            <label for="rating"><span class="orange-text">Your Rating:</span></label>
+            <span class="orange-text">1 <input type="range" id="rating" name="rating" min="1" max="5" /> 5</span></br><!--Why doesnt this br make a space between the range input and the button??-->
+
+            <input type="submit" id="submit-btn" />
+        </form>
+    </section>
+    <section>
+        <h2><span class="red-text">Contact</span></h2>
+        <p><b></b><span class="violet-text">Call us at:</span> <a href="tel:+15555551212"><span class="violet-text">1-555-555-1212</span></a></b></p>
+        <address>
+            <span class="indigo-text">CSS Corner Cafe<br />
+            101 W Main St<br />
+            Bellevue, WA 98004</span>
+        </address>
+    </section>
+</body>
+</html>
