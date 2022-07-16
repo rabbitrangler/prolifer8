@@ -1,0 +1,55 @@
+head {
+    background: black;
+    
+}
+body {
+    font-family: Verdana, Arial, sans-serif;
+    text-align: center;
+    background: black;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+fieldset {
+    margin-top: 20px;
+    border: 10px solid darkolivegreen
+}
+div {
+    width: 500px;
+    display: inline-block;
+}
+h1 {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 200px;
+    border: 10px solid olive;
+    background: darkolivegreen;
+    padding: 12px;
+}
+
+h2 {
+    display: inline-block;
+    background: darkolivegreen;
+    border: 10px solid olive;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+ul {
+    
+    background-image: url(images/coins.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: white;
+    text-align: left;
+    width: 450px;
+}
+
+button {
+    background: darkolivegreen;
+    border: 5px solid olive;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}

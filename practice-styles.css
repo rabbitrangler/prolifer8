@@ -1,0 +1,42 @@
+body {
+    background: black;
+    font-family: Arial, Tahoma, sans-serif;
+}
+
+h1 {
+    color: violet;
+    font: 32px Arial, Tahoma, sans-serif;
+}
+h2 {
+    color: indigo;
+}
+
+/*I can't figure out how to separate sections in this file vs giving specific things a class in the html- so I wanted to make specific text different colors but i cant differentiate in this css file*/
+
+table {
+    width: 50%;
+}
+
+thead {
+    color: blue;
+    text-align: left;
+}
+
+tbody {
+    border: solid green 5px; /*WHY CANT I ADD THIS IM CONFUSED*/
+    color: green;
+}
+label {
+    display: block;
+}
+
+#submit-btn {
+    display: block;
+    background: red;
+    color: black;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
